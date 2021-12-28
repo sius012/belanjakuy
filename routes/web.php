@@ -30,4 +30,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/kelolabarang', [App\Http\Controllers\KelolabarangController::class, 'index']);
+Route::get('/kelolabarang', [KelolabarangController::class, 'index']);
+Route::post('/tambah', [KelolabarangController::class, 'tambahBarang'])->name('store');
+Route::get('/edit/{id}', [KelolabarangController::class, 'edit'])->name('edit');
